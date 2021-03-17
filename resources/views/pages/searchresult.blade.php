@@ -5,11 +5,12 @@
 @stop
 
 @section('content')
+
 <div class="container" style="margin-top: 50px;">
 <a href="{{ route('create') }}" style="margin-bottom: 25px;display: inline-block;">
-	<button type="button" class="btn btn-success">新增基站信息</button>
+    <button type="button" class="btn btn-success">新增基站信息</button>
 </a>
-
+@isset($result_arr)
   @include('pages._search')
 
 <table class="table">
@@ -26,27 +27,28 @@
     </tr>
   </thead>
   <tbody>
-  	@foreach ($jizhans as $key => $jizhan)
+    @foreach ($result_arr as $key => $register)
     <tr>
-      <th scope="row">{{ $jizhan->id }}</th>
-      <td>{{ $jizhan->bh }}</td>
-      <td>{{ $jizhan->name }}</td>
-      <td>{{ $jizhan->region }}</td>
-      <td>{{ $jizhan->lon }}</td>
-      <td>{{ $jizhan->lat }}</td>
-      <td>{{ $jizhan->add }}</td>
+      <<td>{{ $register['id'] }}</td>
+                            <td>{{ $register['bh'] }}</td>
+                            <td>{{ $register['name'] }}</td>
+                            <td>{{ $register['region'] }}</td>
+                            <td>{{ $register['lon'] }}</td>
+                            <td>{{ $register['lat'] }}</td>
+                            <td>{{ $register['add'] }}</td>
       <td>
-        <a href="{{ route('edit', $jizhan->id) }}" style="margin-bottom: 25px;display: inline-block;">
+        <a href="{{ route('edit', $register['id']) }}" style="margin-bottom: 25px;display: inline-block;">
           <button type="button" class="btn btn-warning">修改</button>
         </a>
-        <a href="{{ route('delete', $jizhan->id) }}" style="margin-bottom: 25px;display: inline-block;" onclick="return confirm('确实要基站： {{ $jizhan['name'] }} 吗?');">
+        <a href="{{ route('delete', $register['id']) }}" style="margin-bottom: 25px;display: inline-block;" onclick="return confirm('确实要基站： {{ $register['name'] }} 吗?');">
           <button type="button" class="btn btn-danger">删除</button>
         </a>
       </td>
     </tr>
-	@endforeach
+    @endforeach
   </tbody>
 </table>
-{{ $jizhans->links() }}
+ @endisset
+
 @stop
 

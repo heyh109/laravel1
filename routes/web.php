@@ -16,3 +16,6 @@ Route::get('/delete/{id}', 'PagesController@delete')->name('delete');
 //Route::get('/ruofugai', 'JzruofPagesController@ruofugai')->name('ruofugai');
 Route::get('/create', 'jzruofPagesController@create')->name('create');
 Route::get('/ruofugai', 'JzruofPagesController@jianjie')->name('ruofugai');
+
+//搜索基站信息
+Route::post('/jizhan/search', 'JizhanController@index')->name('jizhan.search');
