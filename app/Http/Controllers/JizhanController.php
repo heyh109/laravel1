@@ -20,7 +20,8 @@ class JizhanController extends Controller
             $result = Jizhan::where('name','like','%'.$search.'%')->orwhere('bh','like','%'.$search.'%')
             ->orwhere('region','like','%'.$search.'%')
             ->orwhere('add','like','%'.$search.'%')
-            ->orderBy('id','desc')->limit($page)->get();
+            ->orderBy('id','desc')->get();
+            //print_r($result);die();
             $result_arr = array();
 
             foreach($result as $key =>$value){

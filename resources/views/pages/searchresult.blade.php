@@ -29,13 +29,13 @@
   <tbody>
     @foreach ($result_arr as $key => $register)
     <tr>
-      <<td>{{ $register['id'] }}</td>
-                            <td>{{ $register['bh'] }}</td>
-                            <td>{{ $register['name'] }}</td>
-                            <td>{{ $register['region'] }}</td>
-                            <td>{{ $register['lon'] }}</td>
-                            <td>{{ $register['lat'] }}</td>
-                            <td>{{ $register['add'] }}</td>
+      <td>{{ $register['id'] }}</td>
+      <td>{{ $register['bh'] }}</td>
+      <td>{{ $register['name'] }}</td>
+      <td>{{ $register['region'] }}</td>
+      <td>{{ $register['lon'] }}</td>
+      <td>{{ $register['lat'] }}</td>
+      <td>{{ $register['add'] }}</td>
       <td>
         <a href="{{ route('edit', $register['id']) }}" style="margin-bottom: 25px;display: inline-block;">
           <button type="button" class="btn btn-warning">修改</button>
@@ -47,6 +47,7 @@
     </tr>
     @endforeach
   </tbody>
+
 </table>
  @endisset
 
