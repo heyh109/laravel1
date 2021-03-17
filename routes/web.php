@@ -19,3 +19,7 @@ Route::get('/ruofugai', 'JzruofPagesController@jianjie')->name('ruofugai');
 
 //搜索基站信息
 Route::post('/jizhan/search', 'JizhanController@index')->name('jizhan.search');
+//用户登录
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

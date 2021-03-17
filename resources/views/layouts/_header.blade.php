@@ -16,9 +16,13 @@
         <a class="nav-link" href="{{route('ruofugai')}}" target="_blank">弱覆盖商铺</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="搜索" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
-    </form>
+
+    <!--登录注册功能-->
+    <ul class="navbar-nav navbar-right">
+        <!-- Authentication Links -->
+        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">登录</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">注册</a></li>
+      </ul>
+
   </div>
 </nav>
