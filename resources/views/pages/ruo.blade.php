@@ -14,6 +14,8 @@
       <th scope="col">经度</th>
       <th scope="col">维度</th>
       <th scope="col">商铺名称</th>
+      <th scope="col">区域</th>
+      <th scope="col">所属网格</th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +25,8 @@
       <td>{{ $jizhruof->splon }}</td>
       <td>{{ $jizhruof->splat }}</td>
       <td>{{ $jizhruof->spname }}</td>
+      <td>{{ $jizhruof->quyu}}</td>
+      <td>{{ $jizhruof->wangge }}</td>
     </tr>
 	@endforeach
   </tbody>

@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('type')
-<title>弱覆盖商铺可视化系统</title>
+<title>郑州底层商户弱覆盖可视化系统</title>
 @stop
 
 @section('content')

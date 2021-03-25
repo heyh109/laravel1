@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <title>@yield('title', '弱覆盖商铺可视化系统')</title>
+    <title>@yield('title', '郑州底层商户弱覆盖可视化系统')</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
@@ -12,6 +12,7 @@
     @yield('type')
   </head>
   <body>
+    
     @include('layouts._header')
 
 		@yield('content')

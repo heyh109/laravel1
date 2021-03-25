@@ -19,6 +19,8 @@ class CreateJizhruofsTable extends Migration
             $table->string('splon')->comment('经度');
             $table->string('splat')->comment('纬度');
             $table->string('name')->comment('商铺名称');
+            $table->string('quyu')->comment('区域');
+            $table->string('wangge')->comment('所属网格');
             $table->timestamps();
         });
     }

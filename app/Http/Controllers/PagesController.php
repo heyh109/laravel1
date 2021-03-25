@@ -8,6 +8,7 @@ use App\Models\Jizhruof;
 
 class PagesController extends Controller
 {
+ 
     public function home()
     {
     	$jizhans = Jizhan::orderBy('id', 'asc')->paginate(9);

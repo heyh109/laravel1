@@ -30,6 +30,9 @@ class jzruofPagesController extends Controller
             $arr_item['splon'] = $value->splon;
             $arr_item['splat'] = $value->splat;
             $arr_item['name'] = $value->name;
+            $arr_item['quyu'] = $value->quyu;
+            $arr_item['wangge'] = $value->wangge;
+
             $arr[] = $arr_item; // 将每一条基站数据装进总数组里
         }
         $Jizhruof_json = json_encode($arr); // 把数组转json
